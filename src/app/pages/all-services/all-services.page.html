@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <ion-label>Hi Fix</ion-label>
+            </div>
+
+            <div class="flex_search">
+                <ion-input type="text" placeholder="Search">
+                  <ion-icon name="search-sharp"></ion-icon>
+                </ion-input>
+                <div class="opt_div">
+                    <ion-icon name="options-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div" [style.height]="screenHeight+'px'">
+            <ion-label class="title_lbl">Our Services</ion-label>
+            <div class="masonry">
+                <div class="item" *ngFor="let item of services; let i = index" (click)="goToServiceDetail()">
+                    <div [class.back_image]="i < length" [class.back_image2]="i > length">
+                        <ion-label class="name">{{item.name}}</ion-label>
+                        <img src="{{item.img}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>  
+</ion-content>

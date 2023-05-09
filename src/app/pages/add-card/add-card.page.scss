@@ -1,0 +1,87 @@
+.main_content_div {
+    width: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .header_div {
+        padding: 16px;
+        align-items: center;
+        background: #EAE8FE;
+        padding-bottom: 45px;
+        padding-top: 40px;
+
+        .flex_header {
+            display: flex;
+            align-items: center;
+            background: #EAE8FE;
+    
+            ion-icon {
+                color: var(--ion-color-primary);
+                font-size: 24px;
+            }
+    
+            ion-label {
+                color: var(--ion-color-primary);
+                margin-left: 20px;
+                font-family: 'semi-bold';
+            }
+        }
+    }
+
+    .content_div {
+        margin-top: -20px;
+        padding: 16px;
+        background: white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        width: 100%;
+        position: fixed;
+        overflow: scroll;
+    
+        .small_lbl {
+            margin-top: 16px;
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        ion-input {
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+            border-radius: 3px;
+            height: 50px;
+            --padding-start: 16px;
+            --padding-end: 16px;
+        }
+
+        .check_div {
+            display: flex;
+            align-items: center;
+            margin-top: 16px;
+            ion-label {
+                margin-left: 10px;
+            }
+        }
+    
+        .inner_content {
+            margin-top: 20px;
+            
+            ion-input {
+                box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+                border-radius: 3px;
+                height: 50px;
+                --padding-start: 16px;
+                --padding-end: 16px;
+            }
+        }
+    
+        ion-button {
+            --border-radius: 3px;
+            font-family: 'semi-bold';
+            display: block;
+            margin: auto;
+            margin-bottom: 30px;
+            margin-top: 16px;
+        }
+    }
+}

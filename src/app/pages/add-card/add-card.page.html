@@ -1,0 +1,38 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="header_div">
+            <div class="flex_header">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <ion-label>Add Card</ion-label>
+            </div>
+        </div>
+
+        <div class="content_div" [style.height]="screenHeight+'px'">
+      
+            <ion-label class="small_lbl">Card Holder Name</ion-label>
+            <ion-input type="text" placeholder="Card Holder Name"></ion-input>
+
+            <ion-label class="small_lbl">Card Number</ion-label>
+            <ion-input type="text" placeholder="Card No"></ion-input>
+
+            <ion-label class="small_lbl">CVC</ion-label>
+            <ion-input type="text" placeholder="CVC"></ion-input>
+
+            <ion-label class="small_lbl">Expiry</ion-label>
+            <ion-datetime display-format="MM/YYYY" placeholder="Expiry"></ion-datetime>
+            <ion-input type="text" placeholder="Expiry"></ion-input>
+
+            <div class="check_div">
+                <ion-checkbox mode="md"></ion-checkbox>
+                <ion-label>Set as a default card</ion-label>
+            </div>
+
+            <ion-button expand="block" (click)="goToPayment()">
+                Add Card
+            </ion-button>
+
+            
+        </div>
+
+    </div>
+</ion-content>

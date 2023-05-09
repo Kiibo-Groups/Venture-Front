@@ -1,0 +1,127 @@
+.main_content_div {
+    width: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .header_div {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        ion-icon {
+            color: var(--ion-color-primary);
+            font-size: 24px;
+        }
+
+        ion-label {
+            color: var(--ion-color-primary);
+            // margin-left: 20px;
+            font-family: 'semi-bold';
+        }
+    }
+
+    .content_div {
+        margin-top: -10px;
+        background: white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+
+        .blue_div {
+            background: #EAE8FE;
+            padding: 16px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            padding-bottom: 40px;
+
+            .title_lbl {
+                font-family: 'semi-bold';
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .points_div {
+                background: var(--ion-color-primary);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                padding: 30px 20px;
+    
+                .simp_lbl {
+                    color: white;
+                    font-size: 12px;
+                    text-align: center;
+                }
+                .bold_lbl {
+                    color: white;
+                    font-family: 'semi-bold';
+                    text-align: center;
+                }
+    
+                .line_div {
+                    height: 50px;
+                    width: 1px;
+                    border-left: 1px dashed white;
+                }
+            }
+        }
+
+        .white_div {
+            background: white;
+            padding: 16px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            margin-top: -20px;
+
+            .title_lbl {
+                font-family: 'semi-bold';
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .detail_div {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-bottom: 16px;
+
+                .light_box {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                    position: relative;
+                    margin-right: 10px;
+
+                    ion-icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        font-size: 20px;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+
+                ion-input {
+                    max-width: 70%;
+                }
+
+                .abs_lbl {
+                    position: absolute;
+                    right: 0;
+                    color: grey;
+                    font-size: 14px;
+                }
+                .change_lbl {
+                    position: absolute;
+                    right: 0;
+                    color: var(--ion-color-primary);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

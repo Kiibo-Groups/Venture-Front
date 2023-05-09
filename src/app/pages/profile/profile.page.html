@@ -1,0 +1,74 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <ion-label>Mi Perfíl</ion-label>
+        </div>
+
+        <div class="content_div">
+
+            <!--
+            <div class="blue_div">
+                <ion-label class="title_lbl">Balance</ion-label>
+
+                <div class="points_div">
+                    <div style="width: 50%;">
+                        <ion-label class="simp_lbl">Balance</ion-label>
+                        <ion-label class="bold_lbl">$240.00</ion-label>
+                    </div>
+                    <div class="line_div"></div>
+                    <div style="width: 50%;">
+                        <ion-label class="simp_lbl">Points</ion-label>
+                        <ion-label class="bold_lbl">2345</ion-label>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="white_div">
+                <ion-label class="title_lbl">Detalles del perfíl</ion-label>
+
+                <div class="detail_div">
+                    <div class="light_box" style="background-color: #e3d0ff;">
+                        <ion-icon name="person" style="color: #7114ff;"></ion-icon>
+                    </div>
+                    <ion-input type="text" placeholder="name" [(ngModel)]="name" [disabled]="changeName == false" ></ion-input>
+                    <ion-label class="abs_lbl" *ngIf="changeName == false" (click)="changeName = true">edit</ion-label>
+                    <ion-label class="change_lbl" *ngIf="changeName == true" (click)="changeName = false">Change</ion-label>
+                </div>
+
+                <div class="detail_div">
+                    <div class="light_box" style="background-color: #ccefff;">
+                        <ion-icon name="mail" style="color: #26baff;"></ion-icon>
+                    </div>
+                    <ion-input type="text" placeholder="Email ID" [(ngModel)]="email" [disabled]="changeEmail == false"></ion-input>
+                    <ion-label class="abs_lbl" *ngIf="changeEmail == false" (click)="changeEmail = true">edit</ion-label>
+                    <ion-label class="change_lbl" *ngIf="changeEmail == true" (click)="changeEmail = false">Change</ion-label>
+                </div>
+
+                <div class="detail_div">
+                    <div class="light_box" style="background-color: #ffe1d1;">
+                        <ion-icon name="call" style="color: #fe681a;"></ion-icon>
+                    </div>
+                    <ion-input type="text" placeholder="Phone No" [(ngModel)]="phone" [disabled]="changePhone == false"></ion-input>
+                    <ion-label class="abs_lbl" *ngIf="changePhone == false" (click)="changePhone = true">edit</ion-label>
+                    <ion-label class="change_lbl" *ngIf="changePhone == true" (click)="changePhone = false">Change</ion-label>
+                </div>
+
+                <div class="detail_div">
+                    <div class="light_box" style="background-color: #d0f7df;">
+                        <ion-icon name="locate-sharp" style="color: #47e77a;"></ion-icon>
+                    </div>
+                    <ion-input type="text" placeholder="Address" [(ngModel)]="address" [disabled]="changeAddress == false"></ion-input>
+                    <ion-label class="abs_lbl" *ngIf="changeAddress == false" (click)="changeAddress = true">edit</ion-label>
+                    <ion-label class="change_lbl" *ngIf="changeAddress == true" (click)="changeAddress = false">Change</ion-label>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>
+
+

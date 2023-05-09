@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div">
+          <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+          <ion-label>Guarantee</ion-label>
+      </div>
+
+      <div class="content_div">
+
+          <div class="upper_div">
+
+              <div class="chat_box">
+                  <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                  <div class="user_detail">
+                      <ion-label class="name_lbl">Anthony Dale</ion-label>
+                      <ion-label class="text_lbl">Engineering</ion-label>
+                  </div>
+                  <div class="abs_div">
+                      <ion-label class="time">10 days</ion-label>
+                  </div>
+              </div>
+
+              <div class="photo_div">
+                  <div class="abs_div">
+                      <ion-icon name="image"></ion-icon>
+                      <ion-label>Add Photos / Videos</ion-label>
+                  </div>
+              </div>
+          </div>
+
+          <div class="bottom_div">
+              <ion-textarea rows="2"></ion-textarea>
+              <ion-button expand="block">
+                  Submit
+              </ion-button>
+          </div>
+
+      </div>
+
+  </div>
+</ion-content>
+
+

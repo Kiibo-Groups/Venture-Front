@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "venture-cafe-5f68f": {
+      "hosting": {
+        "app": [
+          "venture-cafe-5f68f"
+        ]
+      }
+    }
+  }
+}

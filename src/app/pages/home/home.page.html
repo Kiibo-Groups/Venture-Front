@@ -1,0 +1,113 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <div class="left_div">
+                    <ion-label class="bold_lbl">Hi, 
+                        <ion-skeleton-text animated *ngIf="!user"></ion-skeleton-text>
+                        <span *ngIf="user">{{ user.name }}</span>
+                    </ion-label>
+                    <ion-label class="simp_lbl">Bienvenido(a)</ion-label>
+                </div>
+                <div class="user_back" [style.backgroundImage]="'url(https://png.pngtree.com/element_our/png/20180904/qr-code-icon-design-vector-png_76128.jpg)'"></div>
+            </div>
+            <ion-input type="text" placeholder="Buscar conexiones de valor...">
+                <ion-icon name="search-sharp"></ion-icon>
+            </ion-input>
+        </div>
+
+        <div class="content_div">
+
+            
+            <!-- Banners Top -->
+            <div class="slider_div" *ngIf="!banners_top && banners_top.length == 0">
+                <ion-slides scrollbar="ios" [options]="slideOpts">
+                    <ion-slide *ngFor="let item of [1,2,3,4,5]" (click)="viewUrl(item.link)">
+                        <ion-skeleton-text animated class="inner_slide"></ion-skeleton-text>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+
+            <div class="slider_div" *ngIf="banners_top && banners_top.length > 0">
+                <ion-slides scrollbar="ios" [options]="slideOpts">
+                    <ion-slide *ngFor="let item of banners_top" (click)="viewUrl(item.link)">
+                        <div class="inner_slide" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            <!-- Banners Top -->
+
+            <!-- Conexiones de valor -->
+            <div class="header_flex">
+                <ion-label class="title_lbl">Conexiones de valor</ion-label>
+                <ion-label class="view_lbl" (click)="goToAllServices()">View All</ion-label>
+            </div>
+
+            <ion-slides scrollbar="ios" [options]="serviceOpts">
+                <ion-slide *ngFor="let item of serviceSlider" (click)="goToOrderDetail()">
+                    <div class="inner_service">
+                        <ion-label>{{item.name}}</ion-label>
+                        <!-- <img class="inner_img" src="{{item.img}}"> -->
+                        <div class="inner_img" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+            <!-- Conexiones de valor -->
+
+            <!-- Banners Middle -->
+            <div class="slider_div" *ngIf="!banners_mid && banners_mid.length == 0" style="margin-top: 35px;margin-bottom: 35px;">
+                <ion-slides scrollbar="ios" [options]="slideOptsMid">
+                    <ion-slide *ngFor="let item of [1,2,3,4,5]" (click)="viewUrl(item.link)">
+                        <ion-skeleton-text animated class="inner_slide_mid"></ion-skeleton-text>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+
+            <div class="slider_div" *ngIf="banners_mid && banners_mid.length > 0" style="margin-top: 35px;margin-bottom: 35px;">
+                <ion-slides scrollbar="ios" [options]="slideOptsMid">
+                    <ion-slide *ngFor="let item of banners_mid" (click)="viewUrl(item.link)">
+                        <div class="inner_slide_mid" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            <!-- Banners Middle -->
+
+            <!-- Proximos eventos -->
+            <ng-container *ngIf="!events && events.length == 0">
+                <div class="header_flex">
+                    <ion-label class="title_lbl">
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-label>
+                </div>
+
+                <div class="news_div" *ngFor="let ev of events">
+                    <ion-skeleton-text animated class="news_image"></ion-skeleton-text>
+                    <div class="news_content">
+                        <ion-skeleton-text animated style="width:120px;"></ion-skeleton-text><br />
+                        <ion-skeleton-text animated style="width:95%;height:15px;"></ion-skeleton-text> 
+                    </div>
+                </div> 
+            </ng-container>
+
+            <ng-container *ngIf="events && events.length > 0">
+                <div class="header_flex">
+                    <ion-label class="title_lbl">PRÓXIMOS EVENTOS</ion-label>
+                </div>
+
+                <div class="news_div" *ngFor="let ev of events">
+                    <div class="news_image" [style.backgroundImage]="'url('+ ev.portada +')'"></div>
+                    <div class="news_content">
+                        <ion-label class="title_lbl">{{ ev.fecha }}</ion-label>
+                        <ion-label class="title_lbl">{{ ev.location }}</ion-label>
+                        <ion-label class="title_lbl" *ngIf="ev.room != null">Room: {{ ev.room }}</ion-label>  
+                        <ion-label class="content_lbl">{{ ev.titulo | slice:0:15 }}...</ion-label>
+                        <ion-icon name="chevron-forward-circle-sharp" (click)="viewEvent(ev.register)"></ion-icon>
+                    </div>
+                </div> 
+            </ng-container> 
+           <!--  Proximos eventos -->
+        </div>
+
+    </div>
+</ion-content>

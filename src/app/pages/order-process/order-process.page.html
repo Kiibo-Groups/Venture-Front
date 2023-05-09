@@ -1,0 +1,99 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div">
+          <div class="flex_header">
+              <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+              <ion-label>Order Process</ion-label>
+          </div>
+      </div>
+
+      <div class="content_div">
+
+        <div class="service_box" style="margin-top: -65px;">
+            <div class="user_back user_back2" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+            <div class="user_detail">
+                <ion-label class="name_lbl" style="color: var(--ion-color-primary);">Let's Order</ion-label>
+                <ion-label class="text_lbl">Please check your detail, and wait for our service.</ion-label>
+            </div>
+        </div>
+
+        <div class="location_box" style="margin-bottom: 20px;">
+            <div class="loc_detail" style="border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+                <div class="light_box">
+                    <ion-icon name="location"></ion-icon>
+                </div>
+                <div class="loc_content">
+                    <ion-label class="bold_lbl">Service Location</ion-label>
+                    <ion-label class="simp_lbl">Detail Location</ion-label>
+                </div>
+                <ion-icon name="chevron-forward" class="icn_next"></ion-icon>
+            </div>
+            <div class="loc_map"></div>
+        </div>
+
+        <div class="location_box" style="margin-bottom: 20px;">
+            <div class="loc_detail">
+                <div class="light_box" style="background-color: #ffe1d1;">
+                    <ion-icon name="time" style="color: #fe681a;"></ion-icon>
+                </div>
+                <div class="loc_content">
+                    <ion-label class="bold_lbl">Service Time</ion-label>
+                    <ion-label class="simp_lbl">Sat, 29 Dec 2019, 10:00 pm</ion-label>
+                </div>
+                <ion-icon name="chevron-forward" class="icn_next" style="color: #fe681a;"></ion-icon>
+            </div>
+        </div>
+
+        <ion-label class="title_lbl">Payment Method</ion-label>
+
+        <ion-radio-group name="auto" value="ford1" mode="md">
+
+            <div class="location_box" style="margin-bottom: 20px;">
+                <div class="loc_detail">
+                    <div class="light_box light_box2">
+                        <ion-icon name="wallet" style="color: #47e77a;"></ion-icon>
+                    </div>
+                    <div class="loc_content">
+                        <ion-label class="bold_lbl">COD</ion-label>
+                        <ion-label class="simp_lbl">Cash on Delivery</ion-label>
+                    </div>
+                    <ion-radio value="ford1"></ion-radio>
+                </div>
+            </div>
+
+            <div class="location_box" style="margin-bottom: 20px;">
+                <div class="loc_detail">
+                    <div class="light_box light_box2">
+                        <ion-icon name="card" style="color: #26baff;"></ion-icon>
+                    </div>
+                    <div class="loc_content">
+                        <ion-label class="bold_lbl">Debit Card</ion-label>
+                        <ion-label class="simp_lbl">Pay using Debit Card</ion-label>
+                    </div>
+                    <ion-radio value="ford2"></ion-radio>
+                </div>
+            </div>
+
+        </ion-radio-group>
+
+      </div>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer_div">
+        <div class="left_div">
+            <ion-label>Total Payment</ion-label>
+            <ion-label>$30</ion-label>
+        </div>
+        <div class="right_div">
+            <ion-button (click)="goToPayment()">
+                Order
+            </ion-button>
+        </div>
+    </div>
+</ion-footer>
+
+

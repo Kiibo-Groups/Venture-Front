@@ -1,0 +1,71 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <ion-label>Order Detail</ion-label>
+            </div>
+
+            <div class="flex_search">
+                <ion-input type="text" placeholder="Search">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </ion-input>
+                <div class="opt_div">
+                    <ion-icon name="options-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div">
+
+            <div class="service_box" style="margin-top: -65px;">
+                <div class="user_back user_back2" [style.backgroundImage]="'url(assets/imgs/user.jpg)'">
+
+                </div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl" style="color: var(--ion-color-primary);">Hi Fix</ion-label>
+                    <ion-label class="text_lbl">Electonic Application Maintanance Services</ion-label>
+                </div>
+            </div>
+
+            <ion-label class="title_lbl">Select Service Category</ion-label>
+
+            <div class="service_box" *ngFor="let item of userList">
+                <div class="user_back" (click)="goToServiceDetail()">
+                    <img src="{{item.img}}">
+                </div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl" (click)="goToServiceDetail()">{{item.name}}</ion-label>
+                    <ion-label class="text_lbl" (click)="goToServiceDetail()">
+                        Including install support software and clean all virus.
+                    </ion-label>
+                    <div class="bottom_flex">
+                        <ion-label class="price_lbl">$5/unit</ion-label>
+                        <div class="add_box">
+                            <ion-icon name="add" (click)="plus()"></ion-icon>
+                            <ion-label>{{qty}}</ion-label>
+                            <ion-icon name="remove" (click)="minus()"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer_div">
+        <div class="left_div">
+            <ion-label>Total Payment</ion-label>
+            <ion-label>$30</ion-label>
+        </div>
+        <div class="right_div">
+            <ion-button (click)="goToOrderProcess()">
+                Order Process
+            </ion-button>
+        </div>
+    </div>
+</ion-footer>

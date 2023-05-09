@@ -1,0 +1,49 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="upper_div">
+
+            <div #map id="map" class="map"></div>
+            
+            <div class="header_div">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <ion-label>Tracking Detail</ion-label>
+            </div>
+
+            <div class="contact_div">
+                <div class="light_div" style="background: #ccefff;">
+                    <ion-icon name="call" style="color: #26baff;"></ion-icon>
+                </div>
+                <div class="light_div" style="background: #e3d0ff;">
+                    <ion-icon name="chatbox-ellipses" style="color: #7114ff;"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lower_div">
+
+            <div class="user_div">
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl">Anthony Dale</ion-label>
+                    <ion-label class="prof_lbl">Engineer</ion-label>
+                    <div class="flex_div">
+                        <ion-label>4.3</ion-label>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user_div">
+                <div class="user_detail">
+                    <ion-label class="name_lbl">Address</ion-label>
+                    <ion-label class="prof_lbl">
+                        1234, Eva surbhi complex, Aksharwadi Road, Bhavnagar - 364001. 
+                    </ion-label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

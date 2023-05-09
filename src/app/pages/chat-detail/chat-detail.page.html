@@ -1,0 +1,98 @@
+<ion-content>
+
+    <div class="main_content_div" *ngIf="tabID == 1">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                <div class="left_div">
+                    <ion-label class="bold_lbl">Anthony Dale</ion-label>
+                    <div style="display: flex;align-items: center;height: 20px;">
+                        <span style="color: green;font-size: 25px;margin-right: 10px;">•</span>
+                        <ion-label class="simp_lbl">Online</ion-label>
+                    </div>
+                </div>
+                <div class="call_div" (click)="changeTab(2)">
+                    <ion-icon name="call"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div" [style.height]="screenHeight+'px'">
+
+            <span *ngFor="let item of messages">
+                <div class="left_div" *ngIf="item.side == 'left'">
+                    <div class="inner_div">
+                        <div class="msg_div">
+                            <ion-label>{{item.msg}}</ion-label>
+                        </div>
+                        <ion-label class="time_lbl">10:20 am</ion-label>
+                    </div>
+                </div>
+                <div class="right_div" *ngIf="item.side == 'right'">
+                    <div class="inner_div">
+                        <div class="msg_div">
+                            <ion-label>{{item.msg}}</ion-label>
+                        </div>
+                        <div class="time_div">
+                            <ion-label>10:20 am</ion-label>
+                            <ion-icon name="checkmark-done"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="main_content_div2" *ngIf="tabID == 2">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                <div class="left_div">
+                    <ion-label class="bold_lbl">Anthony Dale</ion-label>
+                    <div style="display: flex;align-items: center;height: 20px;">
+                        <span style="color: green;font-size: 25px;margin-right: 10px;">•</span>
+                        <ion-label class="simp_lbl">Online</ion-label>
+                    </div>
+                </div>
+                <div class="call_div" (click)="changeTab(1)">
+                    <ion-icon name="chatbox-ellipses"></ion-icon>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="content_div">
+
+            <div class="round_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+
+            <ion-label class="name_lbl">Anthony Dale</ion-label>
+            <ion-label class="time_lbl">8m 10s</ion-label>
+
+            <div class="action_flex">
+                <div class="round_div" style="background-color: #e3d0ff;">
+                    <ion-icon name="volume-medium" style="color: #7114ff;"></ion-icon>
+                </div>
+                <div class="round_div" style="background-color: #ffe1d1;">
+                    <ion-icon name="call" style="color: #fe681a;"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-content>
+
+<ion-footer style="background: white;" *ngIf="tabID == 1">
+    <div class="footer_div">
+        <ion-input type="text" placeholder="Type Something"></ion-input>
+        <ion-icon name="send-sharp" slot="end"></ion-icon>
+    </div>
+</ion-footer>

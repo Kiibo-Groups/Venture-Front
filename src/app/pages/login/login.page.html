@@ -1,0 +1,40 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="header_div">
+            <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <ion-label>Bienvenido(a)</ion-label>
+        </div>
+        <div class="content_div">
+            <ion-label class="title_lbl">Ingresa tu email <br> para acceder !</ion-label>
+
+            <form #form="ngForm" (ngSubmit)="login(form.value)">
+                <ion-input name="email" clearInput type="email" ngModel placeholder="Correo electronico"></ion-input>
+                <ion-input name="password" clearInput type="password" ngModel placeholder="Contraseña" (keyup.enter)="login(form.value)"></ion-input>
+                <ion-button type="submit" (click)="login(form.value)">
+                    Iniciar sesión
+                </ion-button>
+            </form>
+
+            <div class="abs_div">
+                <ion-label class="or_lbl" >O inicia sesión con</ion-label>
+                <div class="or_div">
+                    <div class="grey_div">
+                        <img src="assets/imgs/facebook.png">
+                    </div>
+                    <div class="grey_div">
+                        <img src="assets/imgs/google.png">    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer style="padding: 15px;text-align: center;">
+   <ion-toolbar>
+    <section>
+        <ion-label color="medium"  mode="ios" routerLink="/register" routerDirection="forward">No tienes una cuenta? <b>Registrate</b></ion-label> 
+    </section>
+   </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div">
+          <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+          <ion-label>Service Rating</ion-label>
+      </div>
+
+      <div class="content_div">
+
+            <div class="image_div" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+            <div class="detail_div">
+                <ion-label class="prof_lbl">Engineer</ion-label>
+                <ion-label class="name_lbl">Anthony Dale</ion-label>
+                <div class="flex_div">
+                    <ion-label>4.3</ion-label>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+            </div>
+
+            <div class="rate_flex">
+                <div class="star_box" (click)="changeRating(1)">
+                    <ion-icon name="star" [class.active]="rating >= 1"></ion-icon>
+                </div>
+                <div class="star_box" (click)="changeRating(2)">
+                    <ion-icon name="star" [class.active]="rating >= 2"></ion-icon>
+                </div>
+                <div class="star_box" (click)="changeRating(3)">
+                    <ion-icon name="star" [class.active]="rating >= 3"></ion-icon>
+                </div>
+                <div class="star_box" (click)="changeRating(4)">
+                    <ion-icon name="star" [class.active]="rating >= 4"></ion-icon>
+                </div>
+                <div class="star_box" (click)="changeRating(5)">
+                    <ion-icon name="star" [class.active]="rating >= 5"></ion-icon>
+                </div>
+            </div>
+
+            <div class="bottom_div">
+                <ion-textarea rows="2"></ion-textarea>
+                <ion-button expand="block" (click)="goToComments()">
+                    Submit
+                </ion-button>
+            </div>
+
+      </div>
+
+  </div>
+</ion-content>

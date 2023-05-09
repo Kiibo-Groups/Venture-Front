@@ -1,0 +1,46 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <ion-label>Service Detail</ion-label>
+        </div>
+
+        <div class="content_div">
+
+            <div class="user_flex">
+                <div class="user_main" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                <div class="user_detail">
+                    <ion-label class="user_name">Anthony Dale</ion-label>
+                    <ion-label class="prof_lbl">Engineer</ion-label>
+                    <div class="flex_rate">
+                        <ion-label class="bold_lbl">4.3</ion-label>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-label class="client_lbl"> + 30 Clients</ion-label>
+                    </div>
+                </div>
+            </div>
+
+            <ion-label class="grey_lbl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam tenetur repellendus asperiores nesciunt molestiae facilis fugiat.
+            </ion-label>
+
+            <ion-label class="title_lbl">Last Service</ion-label>
+
+            <div class="user_slider">
+                <div class="user_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"
+                    *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+                </div>
+            </div>
+
+            <ion-label class="title_lbl">Tracking Detail</ion-label>
+
+            <div class="map_div">
+                <div #map id="map" class="map"></div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

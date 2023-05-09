@@ -1,0 +1,38 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <!-- <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon> -->
+                <ion-label>Messages</ion-label>
+            </div>
+
+            <div class="flex_search">
+                <ion-input type="text" placeholder="Search">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </ion-input>
+                <div class="opt_div">
+                    <ion-icon name="options-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div" [style.height]="screenHeight+'px'">
+
+            <div class="chat_box" *ngFor="let item of userList" (click)="goToChatList()">
+                <div class="user_back" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+                    <ion-label class="text_lbl">Okay</ion-label>
+                </div>
+                <div class="abs_div">
+                    <ion-label class="time">10:20 am</ion-label>
+                    <ion-icon name="ellipsis-horizontal-sharp" *ngIf="item.status == 1"></ion-icon>
+                    <ion-badge color="primary" mode="ios" *ngIf="item.status == 0">2</ion-badge>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

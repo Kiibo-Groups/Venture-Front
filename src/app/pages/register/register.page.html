@@ -1,0 +1,40 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="header_div">
+            <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <ion-label>Crea tu cuenta</ion-label>
+        </div>
+        <div class="content_div">
+            
+            <form #form="ngForm" (ngSubmit)="signup(form.value)">
+                <ion-input mode="md" type="text" clearInput name="name" ngModel placeholder="Nombre" required></ion-input>
+                <ion-input mode="md" type="text" clearInput name="last_name" ngModel placeholder="Apellidos" required></ion-input>
+                <ion-input mode="md" type="email" clearInput name="email" ngModel placeholder="SamSmith@mail.com" required></ion-input>
+                <ion-input mode="md" type="tel" clearInput name="phone" ngModel placeholder="111-223-3444" required></ion-input>
+                <ion-select interface="notifications" value="1" mode="ios" name="sex_type" ngModel placeholder="como te identificas?">
+                    <ion-select-option value="1">Femenino</ion-select-option>
+                    <ion-select-option value="2">Masculino</ion-select-option>
+                </ion-select>
+                <ion-datetime value="1990-01-01" mode="ios" name="birthday" ngModel placeholder="Fecha de cumpleaños"></ion-datetime>
+                <ion-input mode="md" type="password" clearInput name="password" ngModel placeholder="**********" required></ion-input>
+                
+                <ion-button type="submit" [disabled]="!form.valid" type="submit">
+                    Inscribirse
+                </ion-button>
+            </form>
+
+            <div class="abs_div">
+                <ion-label class="or_lbl">O inicia sesión con</ion-label>
+                <div class="or_div">
+                    <div class="grey_div">
+                        <img src="assets/imgs/facebook.png">
+                    </div>
+                    <div class="grey_div">
+                        <img src="assets/imgs/google.png">    
+                    </div>                 
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

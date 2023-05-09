@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="header_div">
+          <div class="flex_header">
+              <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+              <ion-label>Comments</ion-label>
+          </div>
+      </div>
+
+      <div class="content_div">
+
+          <div class="flex_div">
+              <div class="close_btn" (click)="goToBack()">
+                  <ion-icon name="close"></ion-icon>
+              </div>
+              <ion-label class="cancle_text" (click)="goToBack()">Cancel</ion-label>
+              <ion-button size="small" (click)="goToBookmark()">
+                  Submit
+              </ion-button>
+          </div>
+
+          <ion-textarea autoGrow="true" [style.height]="screenHeight+'px'" placeholder="Write something here.."></ion-textarea>
+
+      </div>
+
+  </div>
+</ion-content>

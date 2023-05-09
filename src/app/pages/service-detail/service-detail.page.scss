@@ -1,0 +1,118 @@
+.main_content_div {
+    width: 100%;
+
+    ion-label {
+        display: block;
+    }
+
+    .header_div {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+
+        ion-icon {
+            color: var(--ion-color-primary);
+            font-size: 24px;
+        }
+
+        ion-label {
+            color: var(--ion-color-primary);
+            margin-left: 20px;
+            font-family: 'semi-bold';
+        }
+    }
+
+    .content_div {
+        margin-top: -10px;
+        background: white;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        padding: 16px;
+
+        .user_flex {
+            display: flex;
+            .user_main {
+                width: 120px;
+                height: 140px;
+                border-radius: 10px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .user_detail {
+                margin-left: 16px;
+
+                .user_name {
+                    font-family: 'semi-bold';
+                }
+
+                .prof_lbl {
+                    color: grey;
+                    font-size: 14px;
+                }
+
+                .flex_rate {
+                    display: flex;
+                    align-items: center;
+
+                    .bold_lbl {
+                        font-family: 'semi-bold';
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                    ion-icon {
+                        color: orange;
+                    }
+                    .client_lbl {
+                        color: grey;
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .grey_lbl {
+            font-size: 14px;
+            color: lightgray;
+            margin-top: 16px;
+        }
+
+        .title_lbl {
+            font-family: 'semi-bold';
+            margin-bottom: 16px;
+        }
+
+        .user_slider {
+            display: flex;
+            width: 100%;
+            overflow: scroll;
+            margin-bottom: 16px;
+            .user_image {
+                height: 50px;
+                width: 50px;
+                min-width: 50px;
+                border-radius: 10px;
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-right: 16px;
+            }
+        }
+
+        .map_div {
+            height: 180px;
+            border-radius: 10px;
+            width: 100%;
+            background: #F9F9FC;
+
+            #map{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
